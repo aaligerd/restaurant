@@ -71,8 +71,8 @@ public class EmpService {
             Cookie cookie=new Cookie("mytoken",token);
             cookie.setSecure(true);
             cookie.setHttpOnly(true);
-            cookie.setSecure(true);
-            cookie.setMaxAge(30);
+            cookie.setPath("/");
+            cookie.setMaxAge(86400);
             response.addCookie(cookie);
             return e;
         }

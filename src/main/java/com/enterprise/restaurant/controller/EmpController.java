@@ -32,7 +32,6 @@ public class EmpController {
     public List<Employee> getAllEmployee(@CookieValue("mytoken") String token){
 
         String s = JwtHandler.verifyToken(token);
-        System.out.println(s);
         return empService.getAllEmp();
     }
 
@@ -77,7 +76,7 @@ public class EmpController {
 
     @PostMapping("/forgetpass/sendopt/{email}/{otp}")
     public String sendOtp(@PathVariable("email") String email,@PathVariable("otp") Integer otp){
-        System.out.println(otp+"  "+email);
+
         EmailDetails emailDetails=new EmailDetails();
         emailDetails.setRecipient(email);
         emailDetails.setSubject("OTP for Password change");

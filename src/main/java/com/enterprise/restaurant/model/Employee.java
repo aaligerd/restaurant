@@ -33,18 +33,39 @@ public class Employee {
     @Column(name = "empjobrole")
     private String empjobrole;
 
+
     public Employee() {
     }
 
-    public Employee(int empid, String empname, String empdob, String empstartdate, String emplastdate, long empaadhaarno, String empjobrole) {
+    public Employee(int empid, String empname, String empemail, String empassword, String empdob, String empstartdate, String emplastdate, long empaadhaarno, String empjobrole) {
         this.empid = empid;
         this.empname = empname;
+        this.empemail = empemail;
+        this.empassword = empassword;
         this.empdob = empdob;
         this.empstartdate = empstartdate;
         this.emplastdate = emplastdate;
         this.empaadhaarno = empaadhaarno;
         this.empjobrole = empjobrole;
     }
+
+    public String getEmpemail() {
+        return empemail;
+    }
+
+    public void setEmpemail(String empemail) {
+        this.empemail = empemail;
+    }
+
+    public String getEmpassword() {
+        return empassword;
+    }
+
+    public void setEmpassword(String empassword) {
+        this.empassword = empassword;
+    }
+
+
 
     public int getEmpid() {
         return empid;

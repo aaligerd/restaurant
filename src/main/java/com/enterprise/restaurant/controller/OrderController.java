@@ -1,7 +1,10 @@
 package com.enterprise.restaurant.controller;
 
+import com.enterprise.restaurant.model.Customer;
+import com.enterprise.restaurant.model.Employee;
+import com.enterprise.restaurant.model.Order;
 import com.enterprise.restaurant.model.Packet;
-import com.enterprise.restaurant.service.PacketService;
+import com.enterprise.restaurant.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +15,16 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(originPatterns = "*")
-@RequestMapping("/packet")
-public class PacketController {
+@RequestMapping("/order")
+public class OrderController {
+
     @Autowired
-    private PacketService packetService;
+    private OrderService orderService;
 
     @GetMapping("/getall")
-    public List<Packet> getAllPacket(){
-        return packetService.getAllPacket();
+    public List<Order> getAllOrder(){
+        return  orderService.getAllOrder();
     }
+
+
 }

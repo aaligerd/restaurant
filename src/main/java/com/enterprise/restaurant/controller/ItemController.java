@@ -3,14 +3,12 @@ package com.enterprise.restaurant.controller;
 import com.enterprise.restaurant.model.Item;
 import com.enterprise.restaurant.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(originPatterns = "*")
 @RequestMapping(path = "/item")
 public class ItemController {
     @Autowired
@@ -23,6 +21,7 @@ public class ItemController {
 
     @GetMapping("/menu/category/{category}")
     public List<Item> getMenuByCategory(@PathVariable("category") String category){
+
         return itemService.getItemByCategory(category);
     }
 
