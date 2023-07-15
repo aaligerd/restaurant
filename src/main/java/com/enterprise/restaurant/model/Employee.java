@@ -14,6 +14,14 @@ public class Employee {
     private int empid;
     @Column(name = "empname")
     private String empname;
+
+    @Column(name = "empemail")
+    private String empemail;
+
+    @Column(name = "empassword")
+    private String empassword;
+
+
     @Column(name = "empdob")
     private String empdob;
     @Column(name = "empstartdate")
