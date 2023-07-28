@@ -15,4 +15,12 @@ public class CustomerService {
     public List<Customer> getAllCustomer(){
         return customerDao.findAll();
     }
+
+    public Customer createCustomer(Customer customer) {
+        Customer c=customerDao.findByCphone(customer.getCphone());
+        if(c==null)
+        return  customerDao.save(customer);
+
+        return c;
+    }
 }

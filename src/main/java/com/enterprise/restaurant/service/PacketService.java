@@ -15,4 +15,8 @@ public class PacketService {
     public List<Packet> getAllPacket(){
         return this.packetDao.findAll();
     }
+
+    public Packet createPacket(Packet packet) {
+        return packetDao.save(packet);
+    }
 }

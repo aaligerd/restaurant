@@ -7,7 +7,6 @@ import com.enterprise.restaurant.security.JwtHandler;
 import com.enterprise.restaurant.service.EmailServiceImpl;
 import com.enterprise.restaurant.service.EmpService;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin(originPatterns = "*")
-@RequestMapping("/epmloyee")
+@RequestMapping("/employee")
 public class EmpController {
     @Autowired
     private EmpService empService;

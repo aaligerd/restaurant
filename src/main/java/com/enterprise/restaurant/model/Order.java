@@ -24,15 +24,17 @@ public class Order {
     @JoinColumn(name = "cid")
     private Customer customer;
 
-    private String orderstatus;
+    @OneToOne
+    @JoinColumn(name = "order_priority")
+    private OrderPriority orderPriority;
 
 
-    public Order(int orderno, Packet packet, Employee employee, Customer customer, String orderstatus) {
+    public Order(int orderno, Packet packet, Employee employee, Customer customer, OrderPriority orderPriority) {
         this.orderno = orderno;
         this.packet = packet;
         this.employee = employee;
         this.customer = customer;
-        this.orderstatus = orderstatus;
+        this.orderPriority = orderPriority;
     }
 
     public Order() {
@@ -70,11 +72,11 @@ public class Order {
         this.customer = customer;
     }
 
-    public String getOrderstatus() {
-        return orderstatus;
+    public OrderPriority getOrderPriority() {
+        return orderPriority;
     }
 
-    public void setOrderstatus(String orderstatus) {
-        this.orderstatus = orderstatus;
+    public void setOrderPriority(OrderPriority orderPriority) {
+        this.orderPriority = orderPriority;
     }
 }

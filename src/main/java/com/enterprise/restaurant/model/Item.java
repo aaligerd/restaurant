@@ -4,10 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,13 +22,7 @@ public class Item {
     private String itemcategory;
     private String itemdesc;
 
-    public Item(int itemid, String itemname, int itemprice, String itemcategory, String itemdesc) {
-        this.itemid = itemid;
-        this.itemname = itemname;
-        this.itemprice = itemprice;
-        this.itemcategory = itemcategory;
-        this.itemdesc = itemdesc;
-    }
+
 
     public int getItemid() {
         return itemid;
