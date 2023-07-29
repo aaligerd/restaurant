@@ -28,13 +28,14 @@ public class Order {
     @JoinColumn(name = "order_priority")
     private OrderPriority orderPriority;
 
+    private int emp_madeby;
 
-    public Order(int orderno, Packet packet, Employee employee, Customer customer, OrderPriority orderPriority) {
-        this.orderno = orderno;
-        this.packet = packet;
-        this.employee = employee;
-        this.customer = customer;
-        this.orderPriority = orderPriority;
+    public int getEmpid_madeby() {
+        return emp_madeby;
+    }
+
+    public void setEmpid_madeby(int empid_madeby) {
+        this.emp_madeby = empid_madeby;
     }
 
     public Order() {
@@ -42,6 +43,15 @@ public class Order {
 
     public int getOrderno() {
         return orderno;
+    }
+
+    public Order(int orderno, Packet packet, Employee employee, Customer customer, OrderPriority orderPriority, int empid_madeby) {
+        this.orderno = orderno;
+        this.packet = packet;
+        this.employee = employee;
+        this.customer = customer;
+        this.orderPriority = orderPriority;
+        this.emp_madeby = empid_madeby;
     }
 
     public void setOrderno(int orderno) {

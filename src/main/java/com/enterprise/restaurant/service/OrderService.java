@@ -27,4 +27,16 @@ public class OrderService {
     public List<Order> getOrderById(OrderPriority orderPriority){
         return  orderDao.findOrderByOrderPriority(orderPriority);
     }
+
+    public void upddateMaker(int orderId, int makerId,int statusId) {
+        orderDao.updateMakerById(orderId,makerId,statusId);
+    }
+
+    public List<Order> getOrderByEmpId(int empid) {
+        return orderDao.findOrderByEmpId(empid);
+    }
+
+    public void updateOrderStatusForChef(int statusId) {
+        orderDao.updateOrderForChef(statusId);
+    }
 }
