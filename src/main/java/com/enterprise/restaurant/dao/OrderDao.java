@@ -31,4 +31,6 @@ public interface OrderDao extends JpaRepository<Order,Integer> {
     @Modifying
     @Query(value = "UPDATE orders SET order_priority = 2,emp_madeby=-1 WHERE orderno = ?1",nativeQuery = true)
     void updateOrderForChef(int statusId);
+
+
 }

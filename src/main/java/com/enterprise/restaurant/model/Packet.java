@@ -13,16 +13,26 @@ public class Packet {
     private String packeditems;
     private String totalitems;
     private int packetprice;
+    private String packedtime;
 
 
     public Packet() {
     }
 
-    public Packet(int packetno, String packeditems, String totalitems, int packetprice) {
+    public Packet(int packetno, String packeditems, String totalitems, int packetprice, String packedtime) {
         this.packetno = packetno;
         this.packeditems = packeditems;
         this.totalitems = totalitems;
         this.packetprice = packetprice;
+        this.packedtime = packedtime;
+    }
+
+    public String getPackedtime() {
+        return packedtime;
+    }
+
+    public void setPackedtime(String packedtime) {
+        this.packedtime = packedtime;
     }
 
     public int getPacketno() {
