@@ -2,6 +2,7 @@ package com.enterprise.restaurant.controller;
 
 import com.enterprise.restaurant.model.Packet;
 import com.enterprise.restaurant.model.PacketGraph1;
+import com.enterprise.restaurant.model.PacketGraph2;
 import com.enterprise.restaurant.service.PacketService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,11 @@ public class PacketController {
     @GetMapping("/manager/packet/1")
     public List<PacketGraph1> getPacketGraph1(){
         return packetService.getPacketGraph1();
+    }
+
+
+    @GetMapping("/manager/packet/2")
+    public List<PacketGraph2> getPacketGraph2(){
+        return packetService.getPacketGraph2();
     }
 }

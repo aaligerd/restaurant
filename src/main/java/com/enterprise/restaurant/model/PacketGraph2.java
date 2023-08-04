@@ -1,10 +1,8 @@
 package com.enterprise.restaurant.model;
 
-
-public interface PacketGraph1 {
-    Integer getNoOrder();
+public interface PacketGraph2 {
+    Integer getPrice();
     Integer getPkYear();
     String getPkMonth();
     Integer getPkDate();
-
 }
